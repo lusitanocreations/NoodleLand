@@ -20,9 +20,14 @@ namespace NoodleLand.Data.Drops
         [SerializeField]private int minQuantity;
         [SerializeField] private int maxQuantity;
         [Header("Override if has conditions")] 
-        public bool hasConditions;
-        public DropCondition condition;
-        public BaseItemData conditionDrop;
+        private bool hasConditions;
+        private DropCondition condition;
+        private BaseItemData conditionDrop;
+
+        public BaseItemData ConditionDrop => conditionDrop;
+
+        public bool HasCondition => hasConditions;
+        public DropCondition DropCondition => condition;
 
 
         

@@ -24,8 +24,9 @@ namespace NoodleLand.Entities.GridEntities
                     {
                        handStackableItem.RemoveFromStack(1);
                        
+                       //todo MAKE OBJECT POOL INSTEAD
                        ItemEntity e0 = Instantiate(FindObjectOfType<ItemEntity>());
-                       BaseItemData it = FindObjectOfType<RegisteredItems>().Get("FlintTip");
+                       BaseItemData it = RegisteredItems.Instance.Flint;
 
                        for (int i = 0; i < Random.Range(1,2); i++)
                        {

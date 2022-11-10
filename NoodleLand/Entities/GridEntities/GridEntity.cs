@@ -101,9 +101,9 @@ namespace NoodleLand.Entities.GridEntities
             {
                 foreach (var dropProperty in dropProperties.Drops)
                 {
-                    if (dropProperty.hasConditions)
+                    if (dropProperty.HasCondition)
                     {
-                        DropCondition condition = dropProperty.condition;
+                        DropCondition condition = dropProperty.DropCondition;
 
                         if (dropConditions.TryGetValue(condition, out bool hasFullfiled))
                         {
@@ -111,9 +111,10 @@ namespace NoodleLand.Entities.GridEntities
                           
                             if (hasFullfiled)
                             {
+                                //   TODO MAKE AN OBJECT POOL INSTEAD
                                 ItemEntity g0 = Instantiate(FindObjectOfType<ItemEntity>(), transform.position,
                                     Quaternion.identity);
-                                g0.Construct(new StackableItem(dropProperty.conditionDrop,1));
+                                g0.Construct(new StackableItem(dropProperty.ConditionDrop,1));
                                 
                                 Recycle();
                                 return;
