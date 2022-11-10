@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a69b87619bef4d9389f07c2306b69df6, type: 3}
+  m_Name: WheatCrop
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -141475931, guid: 76678199ea855e947b1d9c429b91e102, type: 3}
+  isStackable: 1
+  itemTag: Wheat
+  actionTime: 1
+  _colorMultiplier: {r: 1, g: 1, b: 1, a: 1}
+  ForceRegister: 0
+  gridEntity: {fileID: 9040721737834326380, guid: 0decd654d848ea84784ccbc9f13f71f0, type: 3}
